@@ -88,7 +88,7 @@ class VerificationController extends Controller
             $user->code_expires_at = null;
             $user->save();
 
-            return back()->with('error', 'The verification code has expired.');
+            return back()->withErrors(['errors' => 'El código de verificación ha expirado.']);
         }
 
         if (Hash::check($request->code, $user->code)) {
@@ -101,6 +101,6 @@ class VerificationController extends Controller
             return redirect('home')->with('success', 'Código verificado exitosamente.');
         }
 
-        return back()->with('error', 'Código de verificación inválido.');
+        return back()->withErrors(['errors'=> 'Código de verificación inválido.']);
     }
 }
