@@ -16,7 +16,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Iniciar sesión</h5>
-
+			<h5 class="card-title">Servidor 1</h5>
                         <!-- Mensajes de estado -->
                         @if (session('status'))
                         <div class="alert alert-info">
@@ -50,7 +50,7 @@
                             </div>
 
                             <!-- reCAPTCHA -->
-                            <div class="g-recaptcha mb-2" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
+                            <div class="g-recaptcha" data-sitekey="{{ config('captcha.sitekey') }}"></div>
 
                             <!-- Botón de login -->
                             <button type="submit" class="btn btn-primary w-100">Entrar</button>

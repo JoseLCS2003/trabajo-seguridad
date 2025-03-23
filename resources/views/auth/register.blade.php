@@ -56,7 +56,7 @@
                             </div>
 
                             <!-- reCAPTCHA -->
-                            <div class="g-recaptcha mt-2" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
+                            <div class="g-recaptcha" data-sitekey="{{ config('captcha.sitekey') }}"></div>
 
                             <!-- Botón de Registro -->
                             <button type="submit" class="btn btn-primary w-100">Registrarse</button>

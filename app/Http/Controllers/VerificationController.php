@@ -70,7 +70,7 @@ class VerificationController extends Controller
             'g-recaptcha-response.required' => 'Es necesario completar la verificación de CAPTCHA.',
         ]);
         
-        $recaptcha = new ReCaptcha(env('RECAPTCHA_SECRET_KEY'));
+        $recaptcha = new ReCaptcha(config('captcha.secret'));
         $response = $recaptcha->verify($request->input('g-recaptcha-response'), $request->ip());        
         if (!$response->isSuccess()) {
             Log::info('entro');

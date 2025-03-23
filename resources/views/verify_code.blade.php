@@ -37,7 +37,7 @@
                             </div>
 
                             <!-- reCAPTCHA -->
-                            <div class="g-recaptcha mt-2" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
+                            <div class="g-recaptcha" data-sitekey="{{ config('captcha.sitekey') }}"></div>
 
                             <button type="submit" class="btn btn-primary mt-3">Verificar código</button>
                         </form>
